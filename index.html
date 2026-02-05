@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="A tiny birthday card web page." />
+  <title>Happy Birthday Jennie Rose!</title>
+  <link rel="preload" as="video" href="Birthday_Cats.mp4" type="video/mp4" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <main class="wrap">
+    <section class="card" role="group" aria-label="Birthday card">
+      <div class="top">
+        <div class="titles">
+          <h1 id="headline">Happy Birthday Jennie Rose!</h1>
+          <p id="subhead" class="subhead">🎉✨ Wishing you a purr-fect day ✨🎉</p>
+        </div>
+      </div>
+
+      <div class="stage" aria-label="Video stage">
+        <img class="bottle bottle-left" src="bottle.gif" alt="" aria-hidden="true" />
+
+        <div class="player" aria-label="Video player">
+          <video
+            id="video"
+            playsinline
+            preload="metadata"
+            poster=""
+          >
+            <source src="Birthday_Cats.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <button id="bigPlay" class="bigPlay" type="button" aria-label="Play video">
+            <span>▶</span>
+            <span class="bigPlayText">Tap to play</span>
+          </button>
+
+          <div class="controls" role="group" aria-label="Playback controls">
+            <button id="togglePlay" type="button">Play</button>
+            <button id="restart" type="button">Restart</button>
+            <button id="toggleMute" type="button">Unmute</button>
+          </div>
+
+          <p id="hint" class="hint" role="status" aria-live="polite"></p>
+        </div>
+
+        <img class="bottle bottle-right" src="bottle.gif" alt="" aria-hidden="true" />
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
